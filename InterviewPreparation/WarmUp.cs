@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace HackerRank
 {
@@ -27,33 +28,30 @@ namespace HackerRank
         //n = 10 Primeras 10 letras de la cadena "abcacabcac"
         public static long RepeatedString(string s, long n)
         {
-            int count = 0;
-            int longitud = s.Length;
-            string cadenaAProcesar = "";
-            if (s.Equals("a"))
-            {
-                return n;
-            }
-   
-             while(cadenaAProcesar.Length < n)
-                {
-                    cadenaAProcesar = cadenaAProcesar + s;
+            long size = s.Length, repeated = n / size;
+            long left = n - (size * repeated);
+            int extra = 0;
 
-                }   
-        
-            if (cadenaAProcesar.Length >= 1 && cadenaAProcesar.Length <= 100)
+            int count = 0;
+            for (int i = 0; i < size; i++)
             {
-                cadenaAProcesar = cadenaAProcesar.Substring(0, (int)n);
-                    char[] vs = cadenaAProcesar.ToArray();
-                    foreach (var item in vs)
-                    {
-                        if (item.Equals('a'))
-                        {
-                            count++;
-                        }
-                    }
+                if (s[i] == 'a')
+                {
+                    ++count;
+                }
             }
-            return count; 
+
+            for (int i = 0; i < left; i++)
+            {
+                if (s[i] == 'a')
+                {
+                    ++extra;
+                }
+            }
+
+            repeated = (repeated * count) + extra;
+
+            return repeated;
         }
     }
 }
