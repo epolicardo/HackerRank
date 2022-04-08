@@ -11,6 +11,8 @@ public class Program
         var minmax = ProblemSolving.MiniMaxSum(list);
         Console.ReadKey();
 
+        
+
         //var clouds = new List<int> { 0, 0, 1, 0, 0, 0, 1, 0 };
         //WarmUp.jumpingCouds(clouds);
 
