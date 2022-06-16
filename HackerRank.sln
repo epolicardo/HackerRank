@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HackerRank", "HackerRank.csproj", "{203B2A0C-F0F8-4B41-9038-D5711673077B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRank_Tests", "..\HackerRank_Tests\HackerRank_Tests.csproj", "{31D0EF72-0B4B-4E69-B2EF-1204C7CC5CF7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRankTests", "HackerRankTests\HackerRankTests.csproj", "{CEEE2132-6570-4926-8088-3291C4DF4C2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{203B2A0C-F0F8-4B41-9038-D5711673077B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{203B2A0C-F0F8-4B41-9038-D5711673077B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{203B2A0C-F0F8-4B41-9038-D5711673077B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{31D0EF72-0B4B-4E69-B2EF-1204C7CC5CF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{31D0EF72-0B4B-4E69-B2EF-1204C7CC5CF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{31D0EF72-0B4B-4E69-B2EF-1204C7CC5CF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{31D0EF72-0B4B-4E69-B2EF-1204C7CC5CF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEEE2132-6570-4926-8088-3291C4DF4C2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEEE2132-6570-4926-8088-3291C4DF4C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEEE2132-6570-4926-8088-3291C4DF4C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEEE2132-6570-4926-8088-3291C4DF4C2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
