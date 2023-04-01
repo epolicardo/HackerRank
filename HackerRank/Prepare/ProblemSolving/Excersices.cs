@@ -38,8 +38,8 @@
         public static List<int> GradingStudents(List<int> grades)
         {
             List<int> students = new List<int>();
-            int diferencia = 0;
-            for (int i = 0; i < grades.Count; i++)
+            int diferencia;
+            for (int i = 1; i < grades.Count; i++)
             {
                 if (grades[i] < 38)
                 {
@@ -90,7 +90,7 @@
         public static bool SubsequenceArray(List<int> array, List<int> sequence)
         {
             int cantidadEncontradas = 0;
-            int position = 0;
+
             for (int i = 0; i < array.Count; i++)
             {
                 for (int j = 0; j < sequence.Count; j++)
