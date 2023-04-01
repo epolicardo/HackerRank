@@ -11,7 +11,7 @@
         /// Then print the respective minimum and maximum values as a single line of two space-separated long integers.
         /// Example: The minimum sum is and the maximum sum is. The function prints 16 24
         /// </summary>
-        /// <param name="arr"></param>
+        /// <param name="arr">The input array</param>
         /// <returns></returns>
         public static string MiniMaxSum(List<int> arr)
         {
