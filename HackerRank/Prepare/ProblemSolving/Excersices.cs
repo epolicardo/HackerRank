@@ -1,4 +1,7 @@
-﻿namespace HackerRank.Prepare.ProblemSolving
+﻿using System.Text;
+using System;
+
+namespace HackerRank.Prepare.ProblemSolving
 {
     public static class Excersices
     {
@@ -119,6 +122,73 @@
                 i++;
             }
             return j == sequence.Count;
+        }
+
+        /// <summary>
+        /// Complete the countApplesAndOranges function in the editor below. It should print the number of apples and oranges that land on Sam's house,
+        /// each on a separate line.
+        ///  countApplesAndOranges has the following parameter(s) :
+        ///
+        ///s|: integer, starting point of Sam's house location.
+        ///t|: integer, ending location of Sam's house location.
+        ///a|: integer, location of the Apple tree.
+        ///b|: integer, location of the Orange tree.
+        ///a|pples: integer array, distances at which each apple falls from the tree.
+        ///oranges: integer array, distances at which each orange falls from the tree.
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="t"></param>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="apples"></param>
+        /// <param name="oranges"></param>
+        public static string CountApplesAndOranges(int s, int t, int a, int b, List<int> apples, List<int> oranges)
+        {
+            int countApples = 0;
+            int countOranges = 0;
+
+            foreach (var apple in apples)
+            {
+                int fruitPossition = 0;
+                fruitPossition = apple + a;
+                if (fruitPossition >= s && fruitPossition <= t)
+                {
+                    countApples++;
+                }
+            }
+
+            foreach (var orange in oranges)
+            {
+                int fruitPossition = 0;
+                fruitPossition = orange + b;
+                if (fruitPossition >= s && fruitPossition <= t)
+                {
+                    countOranges++;
+                }
+            }
+            Console.WriteLine(countApples);
+            Console.WriteLine(countOranges);
+            return $"{countApples} {countOranges}";
+        }
+
+        public static string JumpingKangaroos(int x1, int v1, int x2, int v2)
+        {
+            string response = "";
+            while (0 <= x1 && x1 <= x2 && x2 <= 10000)
+            {
+                if (x1 + v1 != x2 + v2)
+                {
+                    x1 = x1 + v1;
+                    x2 = x2 + v2;
+                    response = "NO";
+                }
+                else
+                {
+                    response = "YES";
+                    break;
+                }
+            }
+            return response;
         }
     }
 }

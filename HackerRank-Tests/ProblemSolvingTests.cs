@@ -1,4 +1,5 @@
 ﻿using HackerRank.Prepare.ProblemSolving;
+using System;
 
 namespace HackerRank_Tests
 {
@@ -37,5 +38,36 @@ namespace HackerRank_Tests
             string actualOutput = Excersices.MiniMaxSum(arr);
             Assert.Equal(expectedOutput, actualOutput);
         }
+
+        [Theory]
+        [MemberData(nameof(CountApplesAndOranges_TestData))]
+        public void CountApplesAndOranges(int s, int t, int a, int b, List<int> apples, List<int> oranges, string expected)
+        {
+            var response = Excersices.CountApplesAndOranges(s, t, a, b, apples, oranges);
+            response.Should().Be(expected);
+        }
+
+        public static IEnumerable<object[]> CountApplesAndOranges_TestData =>
+           new List<object[]>
+           {
+            new object[] {7, 11, 5, 15, new List<int> { -2, 2, 1 }, new List<int> { 5, -6 } , "1 1" },
+            new object[] {7, 10, 4, 12, new List<int> { 2, 3, -4 }, new List<int> { 3,-2,-4 } , "1 2" },
+           };
+
+        [Theory]
+        [MemberData(nameof(JumpingKangaroos_TestData))]
+        public void JumpingKangaroos(int x1, int v1, int x2, int v2, string expected)
+        {
+            var response = Excersices.JumpingKangaroos(x1, v1, x2, v2);
+            response.Should().Be(expected);
+        }
+
+        public static IEnumerable<object[]> JumpingKangaroos_TestData =>
+           new List<object[]>
+           {
+            new object[] {0, 3, 4, 2  , "YES" },
+            new object[] {0, 2, 5, 3,  "NO" },
+            new object[] { 1113, 612, 1331, 610,  "YES" },
+           };
     }
 }
